@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 
-import Dashboard from '../pages/Dashboard';
 import ForgotPassword from '../pages/ForgotPassword';
 import ResetPassword from '../pages/ResetPassword';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
-
 import Route from './Route';
 // import { Container } from './styles';
+import Profile from '../pages/Profile';
+import Dashboard from '../pages/Dashboard';
 
 const Routes: React.FC = () => {
   return (
@@ -17,6 +17,8 @@ const Routes: React.FC = () => {
       <Route path="/signup" component={Signup} />
       <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/reset-password" component={ResetPassword} />
+
+      <Route path="/profile" component={Profile} isPrivate />
       <Route path="/dashboard" component={Dashboard} isPrivate />
     </Switch>
   );
