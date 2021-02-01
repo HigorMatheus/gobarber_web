@@ -106,6 +106,9 @@ export const ProfileStatus = styled.div`
       margin: 5px;
       display: flex;
       flex-direction: column ;
+       p{
+        color: #008739;
+      }
       span{
         color: #636360;
         font-size: 12px
@@ -210,6 +213,7 @@ export const Plataforma = styled.div`
 
 export const Conteudos = styled.div`
   margin: 2.5px;
+  padding: 10px;
   border-radius: 5px;
   background-color : #333;
   grid-area: conteudos;

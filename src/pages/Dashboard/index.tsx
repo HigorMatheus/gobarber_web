@@ -45,11 +45,11 @@ const Dashboard: React.FC = () => {
          <div>
           <div>
             <span>status da asinatura </span>
-            <strong>Ativo</strong>
+           <p> <strong>Ativo</strong>  </p>
           </div>
           <div>
             <span>Tempo restante</span>
-            <strong>higor@gmail.com</strong>
+            <strong> 2 messes</strong>
           </div>
          </div>
        
