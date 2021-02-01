@@ -33,7 +33,7 @@ const ResetPassword: React.FC = () => {
           password: Yup.string().required('Senha Obrigatória'),
 
           password_confirmation: Yup.string().oneOf(
-            [Yup.ref('password'), undefined],
+            [Yup.ref('password'), null],
             'Comformação Incorreta ',
           ),
         });

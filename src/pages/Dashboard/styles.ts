@@ -1,266 +1,248 @@
-import { shade } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.div``;
-
-export const Header = styled.header`
-  padding: 32px 0;
-  background-color: #28262e;
-`;
-
-export const HeaderContent = styled.div`
-  max-width: 1100px;
-  margin: 0 auto;
+export const Container = styled.div`
   display: flex;
   align-items: center;
-
-  > img {
-    height: 80px;
-  }
-
-  button {
-    margin-left: auto;
-    background: transparent;
-    border: none;
-
-    svg {
-      color: #999591;
-      height: 20px;
-      width: 20px;
-    }
-  }
+  justify-content: center;
+  /* flex: 1; */
+  height: 100vh;
 `;
+
+
+export const Content = styled.div`
+  width: 600px;
+  /* height:400px; */
+  /* margin-top: 52px; */
+
+  background-color: #ffff;
+  display: grid;
+
+  grid-template-rows: 1fr 1fr  3fr;
+  grid-template-columns: 3fr 1fr 1fr 2fr  ;
+
+  grid-template-areas: 
+        'profile profileinfo profileinfo profileinfo '
+        'profile  profilestatus profilestatus profileconquitas'
+        'plataforma plataforma conteudos conteudos ';
+`;
+
 
 export const Profile = styled.div`
+  margin: 2.5px;
+  border-radius: 5px;
+  background : #333;
+  grid-area: profile;
+
   display: flex;
-  align-items: center;
-  margin-left: 80px;
+  flex-direction: column;
+
+  svg{
+    margin: 5px
+  }
 
   img {
-    width: 56px;
-    height: 56px;
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
+
+    border: 2px solid #3333ff;
+    margin: auto;
   }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 16px;
-    line-height: 24px;
-
-    span {
-      color: #f4ede8;
-    }
-
-    a {
-      text-decoration: none;
-      &:hover {
-        opacity: 0.8;
-      }
-      strong {
-        color: #ff9000;
-      }
-    }
-  }
-`;
-
-export const Content = styled.main`
-  max-width: 1120px;
-  margin: 64px auto;
-  display: flex;
-`;
-
-export const Schedule = styled.div`
-  flex: 1;
-
-  h1 {
-    font-size: 36px;
-  }
-
-  p {
-    margin-top: 8px;
-    color: #ff9000;
-    display: flex;
-    font-weight: 500;
-
-    span {
-      display: flex;
-      align-items: center;
-    }
-
-    span + span::before {
-      content: '';
-      width: 1px;
-      height: 12px;
-      background-color: #ff9000;
-      margin: 0 8px;
-    }
-  }
-`;
-
-export const NextAppointment = styled.div`
-  margin-top: 64px;
-
-  > strong {
-    color: #999591;
-    font-size: 20px;
-    font-weight: 400;
-  }
-
-  div {
-    background: #3e3b47;
-    display: flex;
-    align-items: center;
-    padding: 16px 24px;
-    border-radius: 10px;
-    margin-top: 24px;
-    position: relative;
-
-    & ::before {
-      position: absolute;
-      height: 80%;
-      width: 1px;
-      left: 0;
-      top: 10%;
-      content: '';
-      background: #ff9000;
-    }
-
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
-
-    strong {
-      margin-left: 24px;
-      color: #fff;
-    }
-
-    span {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      color: #999591;
-
-      svg {
-        color: #ff9000;
-        margin-right: 8px;
-      }
-    }
-  }
-`;
-
-export const Section = styled.section`
-  margin-top: 48px;
-  > strong {
-    color: #999591;
-    font-size: 20px;
-    line-height: 26px;
-    border-bottom: 1px solid #3e3e47;
-    display: block;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
-  }
-  > p {
-    color: #999591;
-  }
-`;
-
-export const Appointment = styled.div`
-  display: flex;
-  align-items: center;
-
-  & + div {
-    margin-top: 16px;
-  }
-
-  span {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    color: #f4ede8;
-    width: 70px;
-    svg {
-      color: #ff9000;
-      margin-right: 8px;
-    }
-  }
-  div {
-    flex: 1;
-    background: #3e3b47;
-    display: flex;
-    align-items: center;
-    padding: 16px 24px;
-    border-radius: 10px;
-    margin-left: 24px;
-
-    img {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-    }
-
-    strong {
-      margin-left: 24px;
-      color: #fff;
-      font-size: 20px;
-    }
-  }
-`;
-
-export const Calendar = styled.div`
-  margin-left: 60px;
-  width: 380px;
-
-  .DayPicker {
-    background: #28262e;
-    border-radius: 10px;
-  }
-
-  .DayPicker-wrapper {
-    padding-bottom: 0;
-  }
-
-  .DayPicker,
-  .DayPicker-Month {
+    div {
     width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+      h1{
+        font-size: 18px;
+        margin: auto;
+        color: #3333ff
+      }
+      p{
+        margin: auto;
+        font-size: 12px;
+        color: #636360;
+      }
+
+  }
+`
+export const ProfileInfo = styled.div`
+  margin: 2.5px;
+  border-radius: 5px;
+  background-color : #333;
+  grid-area: profileinfo;
+  display: flex;
+
+  div{
+    div{
+      margin: 5px;
+      display: flex;
+      flex-direction: column ;
+      span{
+        color: #636360;
+        font-size: 12px
+      }
+      strong{
+        font-size: 15px
+      }
+    }
+  }
+  svg{
+    margin: 5px 5px auto auto;
+    font-size: 12px;
+
+  }
+`
+export const ProfileStatus = styled.div`
+   margin: 2.5px;
+   border-radius: 5px;
+  background-color : #333;
+  grid-area: profilestatus;
+  display: flex;
+  div{
+    div{
+      margin: 5px;
+      display: flex;
+      flex-direction: column ;
+      span{
+        color: #636360;
+        font-size: 12px
+      }
+      strong{
+        font-size: 15px
+      }
+    }
+  }
+  svg{
+    margin: 5px 5px auto auto;
+    font-size: 12px;
+
+  }
+`
+
+export const ProfileConquitas = styled.div`
+  margin: 2.5px;
+  border-radius: 5px;
+  background-color : #333;
+  grid-area: profileconquitas;
+ 
+
+  div{
+    display: flex;
+    h1{
+    font-size: 15px;
+    margin: 5px;
+    color: #636360;
+    }
+
+    svg{
+      font-size: 15px;
+      color: #636360;
+      margin: 5px 5px auto auto
+    }
   }
 
-  .DayPicker-Month {
-    border-collapse: separate;
-    border-spacing: 8px;
-    margin: 16px;
+  section{
+    display: flex;
+    div{
+      flex-direction: column;
+      margin: 5px;
+      img{
+        height:30px;
+        width: 30px;
+        border-radius: 50%;
+        margin: auto
+      }
+      span{
+        font-size: 12px
+      }
+    }
   }
 
-  .DayPicker-Day {
-    width: 40px;
-    height: 40px;
+  
+`
+
+export const Plataforma = styled.div`
+  margin: 2.5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color : #333;
+  grid-area: plataforma;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img{
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+    
   }
 
-  .DayPicker-Day--available:not(.DayPicker-Day--outside) {
-    background: #3e3b47;
-    border-radius: 10px;
-    color: #fff;
+  h1{
+    font-size: 30px;
+
+  }
+  span{
+    font-size: 15px;
+    color: #636360;
   }
 
-  .DayPicker:not(.DayPicker--interactionDisabled)
-    .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
-    background: ${shade(0.2, '#3e3b47')};
+  p{ 
+    margin-top: 10px;
+    font-size: 15px;
+    color: #636360;
+  }
+  strong{
+    color: #008739;
   }
 
-  .DayPicker-Day--today {
-    font-weight: normal;
+  a{
+    margin-top: 25px;
+    text-decoration: none;
+    color: #636360;
+  }
+`
+
+export const Conteudos = styled.div`
+  margin: 2.5px;
+  border-radius: 5px;
+  background-color : #333;
+  grid-area: conteudos;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img{
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+    
   }
 
-  .DayPicker-Day--disabled {
-    color: #666360 !important;
-    background: transparent !important;
+  h1{
+    font-size: 30px;
+
+  }
+  span{
+    font-size: 15px;
+    color: #636360;
   }
 
-  .DayPicker-Day--selected {
-    background: #ff9000 !important;
-    border-radius: 10px;
-    color: #232129 !important;
+  p{ 
+    margin-top: 10px;
+    font-size: 15px;
+    color: #636360;
   }
-`;
+  a{
+    margin-top: 25px;
+    text-decoration: none;
+    color: #636360;
+  }
+`

@@ -49,7 +49,7 @@ const Profile: React.FC = () => {
               then: Yup.string().required(),
               otherwise: Yup.string(),
             })
-            .oneOf([Yup.ref('password'), undefined], 'Comformação Incorreta '),
+            .oneOf([Yup.ref('password'),null], 'Comformação Incorreta '),
         });
 
         await schema.validate(data, {
