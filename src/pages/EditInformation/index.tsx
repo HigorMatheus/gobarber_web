@@ -1,7 +1,7 @@
 import { Form } from '@unform/web';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback } from 'react';
 import { FiEdit, FiLogIn } from 'react-icons/fi';
-import { Link, useHistory } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
 
 import logo from '../../assets/logo2.svg'
