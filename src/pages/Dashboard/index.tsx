@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiArrowLeft, FiCode, FiCrop, FiEdit, FiSettings } from 'react-icons/fi';
+import { FiArrowLeft, FiCode, FiEdit, FiSettings } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import {
