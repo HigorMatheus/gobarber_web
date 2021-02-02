@@ -39,7 +39,7 @@
       "camelcase": "off",
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/no-unused-vars": "off",
-      "no-unused-vars":"warn",
+      // "no-unused-vars":"",
      "import/no-duplicates": "off",
        "eslintimport/no-duplicates": "off",
       "@typescript-eslint/explicit-function-return-type":[

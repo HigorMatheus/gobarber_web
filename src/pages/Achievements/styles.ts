@@ -110,20 +110,6 @@ export const ProfileConquitas = styled.div`
       margin: 9px 9px auto 392px;
     }
 
-  /* div{
-    display: flex;
-    h1{
-      width: 100%;
-      text-align: center;
-    font-size: 15px;
-    margin: 5px;
-    color: #636360;
-    font-family: 'Open Sans';
-    
-    }
-
- 
-  } */
 
   section{
     margin-top: -10px;

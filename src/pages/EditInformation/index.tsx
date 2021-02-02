@@ -1,17 +1,15 @@
 import { Form } from '@unform/web';
 import React, { useCallback, useRef } from 'react';
-import { FiCamera, FiCode, FiEdit, FiLogIn, FiSettings } from 'react-icons/fi';
+import { FiEdit, FiLogIn } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
 
 import logo from '../../assets/logo2.svg'
 
-import logoVibrantPRO from '../../assets/logoVibrantPRO.svg'
-import Button from '../../components/Button';
+
 import Input from '../../components/Input';
 import { useAuth } from '../../hooks/Auth';
 import { useToast } from '../../hooks/Toast';
-import { AvatarInput } from '../Profile/styles';
 
 import {
   Container,
