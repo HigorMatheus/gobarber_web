@@ -21,19 +21,19 @@ import {
 } from './styles';
 
 
-interface FormHandles{
+// interface FormHandles{
   
-}
+// }
 
 const EditInformation: React.FC = () => {
-  const formRef = useRef<FormHandles>(null);
+  // const formRef = useRef<FormHandles>(null);
   const { addToast } = useToast();
-  const history = useHistory();
-  const { user, updateUser } = useAuth();
+  // const history = useHistory();
+  // const { user, updateUser } = useAuth();
 
   const handleSubmit = useCallback(()=>{},[])
 
-  const handleAvatarCharge = useCallback(()=>{},[])
+  // const handleAvatarCharge = useCallback(()=>{},[])
  
   return (
     <Container>
