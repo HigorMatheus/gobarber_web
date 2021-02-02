@@ -24,16 +24,19 @@ const Input: React.FC<InputProps> = ({
   ...rest
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
+
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
   const handleInputFocus = useCallback(() => {
     setIsFocused(true);
   }, []);
 
-  const handleInputBlour = useCallback(() => {
+  const handleInputBlur = useCallback(() => {
     setIsFocused(false);
+
     setIsFilled(!!inputRef.current?.value);
   }, []);
 
@@ -44,23 +47,24 @@ const Input: React.FC<InputProps> = ({
       path: 'value',
     });
   }, [fieldName, registerField]);
+
   return (
     <Container
       style={containerStyle}
-      isErrorred={!!error}
+      isErrored={!!error}
       isFilled={isFilled}
       isFocused={isFocused}
       data-testid="input-container"
     >
       {Icon && <Icon size={20} />}
       <input
-        name={name}
         onFocus={handleInputFocus}
-        onBlur={handleInputBlour}
+        onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
         {...rest}
       />
+
       {error && (
         <Error title={error}>
           <FiAlertCircle color="#c53030" size={20} />

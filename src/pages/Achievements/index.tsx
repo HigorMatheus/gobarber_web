@@ -1,24 +1,21 @@
 import React from 'react';
-import { FiCode, FiEdit, FiLogIn, FiSettings } from 'react-icons/fi';
+import {  FiCode,  FiLogIn, } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
 
 import logo from '../../assets/logo2.svg'
-
 import logoVibrantPRO from '../../assets/logoVibrantPRO.svg'
-
 import {
   Container,
   Content,
   Profile,
-  ProfileInfo,
-  ProfileStatus,
   ProfileConquitas,
   Plataforma,
   Conteudos,
+  AchievementIten,
 } from './styles';
 
-const Dashboard: React.FC = () => {
+const Achievements: React.FC = () => {
  
   return (
     <Container>
@@ -32,55 +29,39 @@ const Dashboard: React.FC = () => {
           <p>MEMBRO DESDE DEZEMBRO 2020</p>
         </div>
        </Profile>
-       <ProfileInfo>
-         <div>
-          <div>
-            <span>nome</span>
-            <strong>Higor Matheus</strong>
-          </div>
-          <div>
-            <span>E-mail</span>
-            <strong>higor@gmail.com</strong>
-          </div>
 
-         </div>
-         
-        <Link to='editInformation'><FiEdit/></Link> 
-       </ProfileInfo>
-       <ProfileStatus>
-         <div>
-          <div>
-            <span>Status da Assinatura </span>
-           <p> Ativo  </p>
-          </div>
-          <div>
-            <span>Tempo restante</span>
-            <strong> 2 meses</strong>
-          </div>
-         </div>
-       
-        <Link to='subscription'><FiSettings/></Link> 
-       </ProfileStatus>
        <ProfileConquitas>
-         <div>
-              <h1>Conquistas</h1>
-              <Link to='achievements'>  <FiCode/></Link>
-            
-         </div>
-      
+
+             <FiCode></FiCode>
+
          <section>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
+          <AchievementIten>
+            <div>
+              <img src={logoVibrantPRO} alt=""/>
+              <span>Vibrant PRO</span>
+            </div>
+
+              <p>+3 Lançamentos realizados ou 100k em faturamento/ano</p>
+
+           </AchievementIten>
+           <AchievementIten>
+            <div>
+              <img src={logoVibrantPRO} alt=""/>
+              <span>Vibrant PRO</span>
+            </div>
+
+              <p>+3 Lançamentos realizados ou 100k em faturamento/ano</p>
+              
+           </AchievementIten>
+           <AchievementIten>
+            <div>
+              <img src={logoVibrantPRO} alt=""/>
+              <span>Vibrant PRO</span>
+            </div>
+
+              <p>+3 Lançamentos realizados ou 100k em faturamento/ano</p>
+              
+           </AchievementIten>
           
          </section>
        </ProfileConquitas>
@@ -109,4 +90,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Achievements;

@@ -21,8 +21,8 @@ export const Content = styled.div`
   grid-template-columns: 3fr 1fr 1fr 2fr  ;
 
   grid-template-areas: 
-        'profile profileinfo profileinfo profileinfo '
-        'profile  profilestatus profilestatus profileconquitas'
+        'profile profileconquitas profileconquitas profileconquitas '
+        'profile  profileconquitas profileconquitas profileconquitas'
         'plataforma plataforma conteudos conteudos ';
 `;
 
@@ -39,12 +39,9 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: column;
 
-
-    
   svg{
     margin: 5px;
     font-size: 14px;
-    transform: rotate(-180deg);
   }
 
   img {
@@ -94,107 +91,6 @@ export const Profile = styled.div`
 
   }
 `
-export const ProfileInfo = styled.div`
-  /* margin: 2.5px; */
-  border-radius: 8px;
-  padding: 10px;
-  width: 412px;
-  height: 147px;
-  background-color :#202024;
-  grid-area: profileinfo;
-  display: flex;
-
-  div{
-    div{
-      margin: 5px;
-      display: flex;
-      flex-direction: column ;
-      span{
-
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 11px;
-        line-height: 15px;
-
-      color: #828284;
-      }
-      strong{
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
-      }
-    }
-  }
-
-  a{
-    text-decoration: none;
-    margin: 0 0 auto auto;
-    svg{
- 
-    font-size: 12px;
-    color: #C4C4C4;
-
-  }
-  }
-
-`
-export const ProfileStatus = styled.div`
-
-  border-radius: 8px;
- 
-   border-radius: 8px;
-   width: 200px;
-  height: 124px;
-  background-color :#202024;
-  grid-area: profilestatus;
-  display: flex;
-  div{
-    padding: 5px;
-    div{
-      margin: 5px;
-      display: flex;
-      flex-direction: column ;
-       p{
-        color: #40C676;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 27px;
-      }
-      span{
-        color: #636360;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 11px;
-        line-height: 15px;
-      }
-      strong{
-        color: #fff;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 27px;
-      }
-    }
-  }
-
-  a{
-    margin-left: auto;
-    svg{
-    margin: 6px 6px auto auto;
-    font-size: 12px;
-    color: #C4C4C4; 
-
-  }
-  }
- 
-`
 
 export const ProfileConquitas = styled.div`
   /* margin: 2.5px; */
@@ -203,12 +99,18 @@ export const ProfileConquitas = styled.div`
   background-color :#202024;
   grid-area: profileconquitas;
 
-  width: 200px;
-  height: 124px;
+  width: 412px;
+  height: 280px;
   margin-left: auto;
  
+  svg{
+      font-size: 15px;
+      margin-left: auto;
+      color: #C4C4C4;
+      margin: 9px 9px auto 392px;
+    }
 
-  div{
+  /* div{
     display: flex;
     h1{
       width: 100%;
@@ -220,39 +122,72 @@ export const ProfileConquitas = styled.div`
     
     }
 
-
-    svg{
-      font-size: 15px;
-      color: #C4C4C4;
-      margin: 9px 9px auto auto
-    }
-  }
+ 
+  } */
 
   section{
+    margin-top: -10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 8px;
-    div{
-      flex-direction: column;
-      margin: 5px;
-      img{
+    flex-direction: column;
+  } 
+`
+export const AchievementIten = styled.div`
+ 
+      /* margin: 10px; */
+      width: 58px;
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-left: 60px;
+
+      div{
         width: 37px;
         height: 38px;
-        /* border-radius: 50%; */
-        margin: auto
+        display: flex;
+        flex-direction: column;
+      
+        img{
+            width: 37px;
+            height: 38px;
+            border-radius: 50%;
+            margin: auto
+        }
+        span{
+          margin-top: 5px;
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 9px;
+          line-height: 12px;
+          text-align: center;
+        }
       }
-      span{
-        margin-top: 5px;
-        font-family: 'Open Sans';
+
+        p{
+          position: absolute;
+          width: 207px;
+          height: 40px;
+          margin-left: 45px;
+          margin-top: 10px;
+        /* left: 797px;
+        top: 126px; */
+          font-family: 'Open Sans';
         font-style: normal;
         font-weight: normal;
-        font-size: 9px;
-        line-height: 12px;
-        text-align: center;
-      }
-    }
-  }
+        font-size: 15px;
+        line-height: 20px;
 
+        color: #C4C4C4;
+
+        }
+
+     
+      
+
+     
   
 `
 

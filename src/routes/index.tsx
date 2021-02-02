@@ -9,6 +9,9 @@ import Signup from '../pages/Signup';
 // import { Container } from './styles';
 import Profile from '../pages/Profile';
 import Dashboard from '../pages/Dashboard';
+import Achievements from '../pages/Achievements';
+import Subscription from '../pages/Subscription';
+import EditInformation from '../pages/EditInformation';
 
 const Routes: React.FC = () => {
   return (
@@ -20,6 +23,12 @@ const Routes: React.FC = () => {
 
       <Route path="/profile" component={Profile}  />
       <Route path="/dashboard" component={Dashboard}  />
+      <Route path="/achievements" component={Achievements}  />
+      <Route path="/subscription" component={Subscription}  />
+      <Route path="/editInformation" component={EditInformation}  />
+
+      
+      
     </Switch>
   );
 };

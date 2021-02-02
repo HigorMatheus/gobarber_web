@@ -21,8 +21,8 @@ export const Content = styled.div`
   grid-template-columns: 3fr 1fr 1fr 2fr  ;
 
   grid-template-areas: 
-        'profile profileinfo profileinfo profileinfo '
-        'profile  profilestatus profilestatus profileconquitas'
+        'profile profilestatus profilestatus profilestatus '
+        'profile  profilestatus profilestatus profilestatus'
         'plataforma plataforma conteudos conteudos ';
 `;
 
@@ -39,12 +39,9 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: column;
 
-
-    
   svg{
     margin: 5px;
     font-size: 14px;
-    transform: rotate(-180deg);
   }
 
   img {
@@ -94,65 +91,22 @@ export const Profile = styled.div`
 
   }
 `
-export const ProfileInfo = styled.div`
-  /* margin: 2.5px; */
-  border-radius: 8px;
-  padding: 10px;
-  width: 412px;
-  height: 147px;
-  background-color :#202024;
-  grid-area: profileinfo;
-  display: flex;
 
-  div{
-    div{
-      margin: 5px;
-      display: flex;
-      flex-direction: column ;
-      span{
-
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 11px;
-        line-height: 15px;
-
-      color: #828284;
-      }
-      strong{
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
-      }
-    }
-  }
-
-  a{
-    text-decoration: none;
-    margin: 0 0 auto auto;
-    svg{
- 
-    font-size: 12px;
-    color: #C4C4C4;
-
-  }
-  }
-
-`
 export const ProfileStatus = styled.div`
 
   border-radius: 8px;
- 
-   border-radius: 8px;
-   width: 200px;
-  height: 124px;
+  padding: 10px;
+  width: 412px;
+  height: 280px;
   background-color :#202024;
   grid-area: profilestatus;
   display: flex;
+  flex-direction: column;
+  
   div{
-    padding: 5px;
+    /* padding: 5px; */
+    display: flex;
+    /* justify-content: space-between; */
     div{
       margin: 5px;
       display: flex;
@@ -183,77 +137,105 @@ export const ProfileStatus = styled.div`
       }
     }
   }
-
-  a{
-    margin-left: auto;
-    svg{
-    margin: 6px 6px auto auto;
+  svg{
+    margin: 0 0 auto auto;
     font-size: 12px;
     color: #C4C4C4; 
 
   }
+`
+export const StatusHistory = styled.div`
+  /* margin-left: 10px; */
+  display: flex;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  h1{
+    padding: 2px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+
+    color: #828284;
   }
- 
+  p{
+    padding: 2px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+
+  }
 `
 
-export const ProfileConquitas = styled.div`
-  /* margin: 2.5px; */
-  /* margin-top: 7.5px; */
-  border-radius: 8px;
-  background-color :#202024;
-  grid-area: profileconquitas;
-
-  width: 200px;
-  height: 124px;
-  margin-left: auto;
- 
+export const SelectionStatus = styled.div`
+  margin-top: auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
 
   div{
-    display: flex;
-    h1{
-      width: 100%;
-      text-align: center;
-    font-size: 15px;
-    margin: 5px;
-    color: #636360;
-    font-family: 'Open Sans';
-    
+    width: 176px;
+    height: 119px;
+    left: 692px;
+    top: 247px;
+
+    border: 2px dashed #3A3A3E;
+    box-sizing: border-box;
+    border-radius: 15px;
+    &.active{
+      background: rgba(64, 198, 118, 0.1);
+      border: 2px solid #40C676;
     }
 
+   span{
+     text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    color: #3A3A3E;
+    &.active{
+      color: #C4C4C4
+    }
+    }
+
+    h1{
+      font-family: 'Open Sans';
+      text-align: center;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 27px;
+
+      color: #828284;
+      &.active{
+        color: #40C676;
+
+      }
+    }
 
     svg{
-      font-size: 15px;
-      color: #C4C4C4;
-      margin: 9px 9px auto auto
-    }
-  }
+      width: 50px;
+      height: 50px;
+      color: #3A3A3E;
+      margin: auto;
+    
+      &.active{
+        color: #40C676;
 
-  section{
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    div{
-      flex-direction: column;
-      margin: 5px;
-      img{
-        width: 37px;
-        height: 38px;
-        /* border-radius: 50%; */
-        margin: auto
-      }
-      span{
-        margin-top: 5px;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 9px;
-        line-height: 12px;
-        text-align: center;
       }
     }
+
+   
   }
 
-  
 `
 
 export const Plataforma = styled.div`

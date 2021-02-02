@@ -1,24 +1,22 @@
 import React from 'react';
-import { FiCode, FiEdit, FiLogIn, FiSettings } from 'react-icons/fi';
+import { FiArrowLeft, FiCode, FiCornerLeftDown, FiCreditCard, FiEdit, FiLogIn, FiSettings } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
 
 import logo from '../../assets/logo2.svg'
 
-import logoVibrantPRO from '../../assets/logoVibrantPRO.svg'
-
 import {
   Container,
   Content,
   Profile,
-  ProfileInfo,
   ProfileStatus,
-  ProfileConquitas,
+  StatusHistory,
+  SelectionStatus,
   Plataforma,
   Conteudos,
 } from './styles';
 
-const Dashboard: React.FC = () => {
+const Subscription: React.FC = (): JSX.Element => {
  
   return (
     <Container>
@@ -32,21 +30,6 @@ const Dashboard: React.FC = () => {
           <p>MEMBRO DESDE DEZEMBRO 2020</p>
         </div>
        </Profile>
-       <ProfileInfo>
-         <div>
-          <div>
-            <span>nome</span>
-            <strong>Higor Matheus</strong>
-          </div>
-          <div>
-            <span>E-mail</span>
-            <strong>higor@gmail.com</strong>
-          </div>
-
-         </div>
-         
-        <Link to='editInformation'><FiEdit/></Link> 
-       </ProfileInfo>
        <ProfileStatus>
          <div>
           <div>
@@ -57,33 +40,28 @@ const Dashboard: React.FC = () => {
             <span>Tempo restante</span>
             <strong> 2 meses</strong>
           </div>
+          <FiSettings/>
          </div>
-       
-        <Link to='subscription'><FiSettings/></Link> 
+
+         <StatusHistory>
+           <h1>Histórico</h1>
+           <p>15/03/2019 Assinatura anual - R$ 997,00</p>
+           <p>15/03/2020 Renovação anual - R$ 1.497,00</p>
+         </StatusHistory>
+
+         <SelectionStatus>
+           <div>
+             <FiCornerLeftDown></FiCornerLeftDown>
+             <span>Renovação Automática</span>
+             <h1>Ativar</h1>
+           </div>
+           <div className='active'>
+             <FiCreditCard className='active' />
+             <span className='active'>Renovação Manual</span>
+             <h1 className='active'>Ativada</h1>
+           </div>
+         </SelectionStatus>  
        </ProfileStatus>
-       <ProfileConquitas>
-         <div>
-              <h1>Conquistas</h1>
-              <Link to='achievements'>  <FiCode/></Link>
-            
-         </div>
-      
-         <section>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
-           <div>
-             <img src={logoVibrantPRO} alt=""/>
-             <span>Vibrant PRO</span>
-           </div>
-          
-         </section>
-       </ProfileConquitas>
        <Plataforma >
          <img src={logo} alt=""/>
 
@@ -109,4 +87,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Subscription;
