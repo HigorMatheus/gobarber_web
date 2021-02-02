@@ -80,6 +80,11 @@ const Signin: React.FC = () => {
             <Link to="/forgot-password"> Esqueci minha senha</Link>
           </Form>
 
+          <Link to="dashboard">
+            <FiLogIn />
+            Dashboard
+          </Link>
+
           <Link to="signup">
             <FiLogIn />
             Criar conta
