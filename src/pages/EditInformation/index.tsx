@@ -8,8 +8,8 @@ import logo from '../../assets/logo2.svg'
 
 
 import Input from '../../components/Input';
-import { useAuth } from '../../hooks/Auth';
-import { useToast } from '../../hooks/Toast';
+// import { useAuth } from '../../hooks/Auth';
+// import { useToast } from '../../hooks/Toast';
 
 import {
   Container,
@@ -27,7 +27,7 @@ import {
 
 const EditInformation: React.FC = () => {
   // const formRef = useRef<FormHandles>(null);
-  const { addToast } = useToast();
+  // const { addToast } = useToast();
   // const history = useHistory();
   // const { user, updateUser } = useAuth();
 
