@@ -42,6 +42,7 @@ export const Profile = styled.div`
   svg{
     margin: 5px;
     font-size: 14px;
+    transform: rotate(-180deg);
   }
 
   img {

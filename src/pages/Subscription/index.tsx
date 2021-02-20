@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiCornerLeftDown, FiCreditCard, FiLogIn, FiSettings } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
@@ -17,7 +17,7 @@ import {
 } from './styles';
 
 const Subscription: React.FC = (): JSX.Element => {
- 
+        
   return (
     <Container>
      <Content>

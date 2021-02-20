@@ -42,6 +42,7 @@ export const Profile = styled.div`
   svg{
     margin: 5px;
     font-size: 14px;
+    transform: rotate(-180deg);
   }
 
   img {
@@ -102,33 +103,60 @@ export const ProfileInfo = styled.div`
   display: flex;
 
   form{
-    div{
-      margin: 5px;
+    div>{
       display: flex;
-      flex-direction: column ;
+      /* flex-direction: column; */
+      position: absolute;
+  
+      width: 227px;
+      height: 48px;
+     
+      svg{
+        position: absolute;
+        /* left: 6%;
+        right: 36.32%;
+        top: 13.09%;
+        bottom: 85.8%; */
+
+        color: #007EDC;
+        margin-top: 3px;
+        height: 15px;
+        left: 690px;
+        /* top: 112px; */
+        margin-left: 180px;
+        margin-top: 20px;
+        font-size: 12px
+      }
       span{
+        margin-top: 3px;
+        height: 15px;
+        left: 690px;
+        top: 112px;
 
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 11px;
         line-height: 15px;
+        color: #828284;
 
-      color: #828284;
       }
-      strong{
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
+
+      div{
+        padding: 0;
+   
+      width: 213px;
+      height: 27px;
+
+      border-bottom: 2px dashed #007EDC;
       }
+
     }
+   
   }
   svg{
     margin: 5px 5px auto auto;
     font-size: 12px;
-
   }
 `
 

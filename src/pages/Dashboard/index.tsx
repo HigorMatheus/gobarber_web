@@ -92,7 +92,7 @@ const Dashboard: React.FC = () => {
 
          <p>A sua plataforma completa para<strong> gestão de projetos</strong> e <strong> operação de lançamento. </strong>   </p>
 
-         <Link to='dashboard'> CLIQUE PARA ACESSAR</Link>
+         <Link to='projectshome'> CLIQUE PARA ACESSAR</Link>
        </Plataforma>
        <Conteudos >
           <img src={conteudo} alt=""/>

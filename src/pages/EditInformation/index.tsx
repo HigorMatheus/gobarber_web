@@ -1,6 +1,10 @@
 import { Form } from '@unform/web';
 import React, { useCallback } from 'react';
-import { FiEdit, FiLogIn } from 'react-icons/fi';
+import { 
+  // FiCheck,
+   FiEdit, 
+   FiLogIn
+} from 'react-icons/fi';
 import { Link,  } from 'react-router-dom';
 import conteudo from '../../assets/conteudo2.svg'
 
@@ -57,29 +61,45 @@ const EditInformation: React.FC = () => {
           // }}
           onSubmit={handleSubmit}
         >
-        
-          {/* <span>nome</span> */}
-          <Input name="name" 
-          // icon={FiUser}
-           placeholder="Nome" />
+
+          <div>
+            <span>nome</span>   
+            {/* <FiCheck/> */}
+            <Input name="name" 
+            // icon={FiUser}
+            placeholder="Nome" 
+            />
           
-     
-          <Input name="email"
+          </div>
+          <div>
+            <span>E-Mail</span>
+            <Input name="email"
           //  icon={FiMail} 
            placeholder="E-Mail" />
-          <Input
-         
-            name="DDD + Celular"
-            // icon={FiLock}
-            type="text"
-            placeholder="DDD + Celular"
-          />
-          <Input
+          </div>
+          <div>
+            <span>DDD + Celular</span>
+            <Input
+              name="DDD + Celular"
+              // icon={FiLock}
+              type="text"
+              placeholder="DDD + Celular"
+            />
+          </div>
+          <div>
+            <span>CPF</span>
+            <Input
             name="CPF"
             // icon={FiLock}
             type="text"
             placeholder=" CPF"
           />
+          </div>
+          
+     
+         
+     
+        
 
           {/* <Button type="submit">Comfirmar mudanças</Button> */}
         </Form>

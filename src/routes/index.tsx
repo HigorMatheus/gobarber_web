@@ -12,6 +12,8 @@ import Dashboard from '../pages/Dashboard';
 import Achievements from '../pages/Achievements';
 import Subscription from '../pages/Subscription';
 import EditInformation from '../pages/EditInformation';
+import Projectshome from '../pages/Projectshome';
+import Selectproject from '../pages/Selectproject';
 
 const Routes: React.FC = () => {
   return (
@@ -22,10 +24,15 @@ const Routes: React.FC = () => {
       <Route path="/reset-password" component={ResetPassword} />
 
       <Route path="/profile" component={Profile}  />
+
+
       <Route path="/dashboard" component={Dashboard}  />
       <Route path="/achievements" component={Achievements}  />
       <Route path="/subscription" component={Subscription}  />
       <Route path="/editInformation" component={EditInformation}  />
+      <Route path="/projectshome" component={Projectshome}  /> 
+      <Route path="/selectproject" component={Selectproject}  />     
+                
 
       
       

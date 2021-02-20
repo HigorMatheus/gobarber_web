@@ -10,7 +10,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #312e38;
+    /* background: #312e38; */
+    background-color:#121214;
     color: #fff;
   }
   body, input, button{
